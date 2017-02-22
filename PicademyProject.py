@@ -15,8 +15,9 @@ from auth import (
 	access_token_secret
 	)
 
-CLARIFAI_APP_ID = "*****CHANGE ME*****"
-CLARIFAI_APP_SECRET = "*****CHANGE ME*****"
+# add your clarifai keys here
+CLARIFAI_APP_ID = " *****CHANGE ME***** "
+CLARIFAI_APP_SECRET = " *****CHANGE ME***** "
 ledR = LED(23)
 ledG = LED(24)
 camera = PiCamera()
@@ -65,7 +66,7 @@ while True:
     ledR.off()
 
 
-    #tweet if there is a facxe in the picture.
+    #tweet if there is a face in the picture.
     try:
         box = data['outputs'][0]['data']['regions'][0]['region_info']['bounding_box']
     except IndexError:
